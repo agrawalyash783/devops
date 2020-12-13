@@ -1,8 +1,13 @@
 About :
+
 1.This Terraform code is to trigger lambda function whenever CSV file get uploads in S3 bucket and insert that record into dynamoDB.
+
 2.This code also create API gateway with POST,GET,DELETE method to perform CRUD operations on dynamoDB.
+
 3.To perform CRUD operations I have used lambda functions with different platform such as python and nodeJS.
+
 4.POST lambda function will use to perform put and update opetaions.
+
   to test lambda function create event and enter the JSON format in body
     {
       "id":"55",
@@ -10,7 +15,9 @@ About :
       "age":"54",
       "city":"qwe"
     }
+    
 5.GET function will use to scan and get items from table
+
 6.DELETE function will use to delete item with key ID.
   to test lambda function create event and enter the JSON format in body
   {
