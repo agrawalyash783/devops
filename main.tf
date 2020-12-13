@@ -1,7 +1,7 @@
 # Specify your provider
 
 provider "aws" {
-  region = "us-east-1"
+  region = "YOUR REGION" # Prefer us-east-1
   access_key = "YOUR ACCESS KEY HERE"
   secret_key = "YOUR SECRET ACCESS KEY HERE"
 }
@@ -21,6 +21,16 @@ resource "aws_s3_bucket" "project-bucket" {
   acl    = "public-read-write"
 }
 
+# Adding csv file in s3 bucket. Uncomment if you want to upload file manually. peform terraform apply one more time if you get error BucketNotFound as
+# many time it takes time to create S3 bucket
+
+#resource "aws_s3_bucket_object" "object" {
+#  bucket = "scalerealassignment"
+#  key = "project.csv"
+#  source = "employee.csv"
+#  acl = "public-read-write"
+#  etag = filemd5("employee.csv")
+#}
 
 # Creating dyanamo DB
 
